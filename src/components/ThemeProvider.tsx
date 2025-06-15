@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type Theme = 'dark' | 'light';
@@ -12,16 +11,26 @@ const ThemeProviderContext = createContext<ThemeProviderContextType | undefined>
 
 export function ThemeProvider({
   children,
-  defaultTheme = 'light',
   storageKey = 'vite-ui-theme',
 }: {
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
 }) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  );
+  const [theme, setTheme] = useState<Theme>(() => {
+    // First check if there's a stored preference
+    const stored = localStorage.getItem(storageKey) as Theme;
+    if (stored) {
+      return stored;
+    }
+    
+    // Otherwise use system preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    
+    return 'light';
+  });
 
   useEffect(() => {
     const root = window.document.documentElement;
