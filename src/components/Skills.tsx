@@ -20,29 +20,29 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-24 bg-white" id="skills">
+    <section className="py-32 bg-white" id="skills">
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+          <h2 className="text-5xl font-bold text-black mb-4 tracking-tight">
             Skills & Achievements
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             Technologies and accomplishments that drive my work
           </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="border border-gray-100/50 bg-gray-50/30 rounded-3xl">
+            <Card key={index} className="border border-gray-200 bg-gray-50 rounded-2xl">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">
+                <h3 className="text-2xl font-bold text-black mb-6">
                   {category.title}
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill) => (
                     <span 
                       key={skill} 
-                      className="bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium border border-gray-100 hover:border-gray-200 transition-colors duration-300"
+                      className="bg-white text-gray-800 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:border-gray-300 transition-colors duration-200"
                     >
                       {skill}
                     </span>
@@ -54,16 +54,16 @@ const Skills = () => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-8">
+          <h3 className="text-3xl font-bold text-black mb-8">
             Key Achievements
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {achievements.map((achievement, index) => (
-              <Card key={index} className="border border-gray-100/50 bg-gray-50/30 rounded-3xl">
+              <Card key={index} className="border border-gray-200 bg-gray-50 rounded-2xl">
                 <CardContent className="p-6">
                   <div className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2.5 mr-4 flex-shrink-0"></div>
-                    <p className="text-gray-600 text-sm leading-relaxed">{achievement}</p>
+                    <div className="w-2 h-2 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-lg">{achievement}</p>
                   </div>
                 </CardContent>
               </Card>
