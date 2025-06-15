@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Mail, User, ArrowDown } from "lucide-react";
 
@@ -24,7 +25,6 @@ const Hero = () => {
               alt="Himanshu Dewan"
               className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl ring-2 ring-blue-500/30 ring-offset-2 ring-offset-white"
             />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-900 bg-clip-text text-transparent mb-4 animate-fade-in delay-200">
             Himanshu Dewan
