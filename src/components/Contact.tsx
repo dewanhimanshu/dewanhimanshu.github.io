@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Linkedin, Phone, ArrowRight } from "lucide-react";
@@ -17,7 +16,13 @@ const Contact = () => {
   };
 
   const handleResumeDownload = () => {
-    window.open("https://drive.google.com/file/d/17A2EYSlQhjVO5KH-ZP3cK0NUs5m5kAqj/view?usp=sharing", "_blank");
+    console.log("Resume download button clicked");
+    try {
+      window.open("https://drive.google.com/file/d/17A2EYSlQhjVO5KH-ZP3cK0NUs5m5kAqj/view?usp=sharing", "_blank");
+      console.log("Resume download initiated successfully");
+    } catch (error) {
+      console.error("Error opening resume:", error);
+    }
   };
 
   return (
