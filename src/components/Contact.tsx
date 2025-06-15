@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, User, Link, Phone } from "lucide-react";
@@ -43,7 +42,7 @@ const Contact = () => {
               <CardTitle className="text-lg">Email</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600 mb-4">himanshudewan.mca20.du@gmail.com</p>
+              <p className="text-gray-600 mb-4 break-words text-sm">himanshudewan.mca20.du@gmail.com</p>
               <Button 
                 variant="outline" 
                 className="w-full border-2 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105" 
