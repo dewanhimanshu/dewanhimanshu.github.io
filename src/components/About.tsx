@@ -3,14 +3,14 @@ import { Badge } from "@/components/ui/badge";
 
 const About = () => {
   return (
-    <section className="py-32 bg-white" id="about">
+    <section className="py-24 bg-white" id="about">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
           <div>
-            <h2 className="text-5xl font-bold text-black mb-8 tracking-tight">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 tracking-tight">
               About me
             </h2>
-            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+            <div className="space-y-6 text-base text-gray-600 leading-relaxed">
               <p>
                 I'm a passionate Software Engineer with over 4+ years of experience 
                 building robust, scalable applications. Currently working as Software 
@@ -32,31 +32,31 @@ const About = () => {
           </div>
           
           <div className="lg:pl-8">
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-              <h3 className="text-2xl font-bold text-black mb-8">Education</h3>
+            <div className="bg-gray-50/50 rounded-3xl p-8 border border-gray-100/50">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-8">Education</h3>
               <div className="space-y-8">
                 <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <h4 className="font-semibold text-black text-lg">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h4 className="font-semibold text-gray-900 text-lg">
                       Master of Computer Applications
                     </h4>
-                    <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 border-yellow-200">
+                    <Badge variant="secondary" className="bg-amber-50 text-amber-700 border-amber-200/50 text-xs font-medium">
                       Gold Medalist
                     </Badge>
                   </div>
-                  <p className="text-gray-600 mb-1">University of Delhi</p>
+                  <p className="text-gray-600 mb-1 font-medium">University of Delhi</p>
                   <p className="text-sm text-gray-500">CGPA: 9.75 • Apr 2020 - Apr 2023</p>
                 </div>
                 <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <h4 className="font-semibold text-black text-lg">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h4 className="font-semibold text-gray-900 text-lg">
                       BSc(H) Computer Science
                     </h4>
-                    <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 border-yellow-200">
+                    <Badge variant="secondary" className="bg-amber-50 text-amber-700 border-amber-200/50 text-xs font-medium">
                       Gold Medalist
                     </Badge>
                   </div>
-                  <p className="text-gray-600 mb-1">Hansraj College, University of Delhi</p>
+                  <p className="text-gray-600 mb-1 font-medium">Hansraj College, University of Delhi</p>
                   <p className="text-sm text-gray-500">CGPA: 9.8 • May 2017 - Apr 2020</p>
                 </div>
               </div>
