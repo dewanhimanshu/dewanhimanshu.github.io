@@ -17,7 +17,7 @@ const Contact = () => {
   };
 
   const handleResumeDownload = () => {
-    console.log("Resume download initiated");
+    window.open("https://drive.google.com/file/d/17A2EYSlQhjVO5KH-ZP3cK0NUs5m5kAqj/view?usp=sharing", "_blank");
   };
 
   return (
