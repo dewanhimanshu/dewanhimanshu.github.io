@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="mb-8 animate-fade-in">
           <div className="relative group">
             <img
-              src="/lovable-uploads/cbd1170a-f0e3-4ac8-acc7-0237d2ca28a3.png"
+              src="/lovable-uploads/19703a54-f1b4-47d2-aec0-4dbaaa38b1a9.png"
               alt="Himanshu Dewan"
               className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl"
             />
