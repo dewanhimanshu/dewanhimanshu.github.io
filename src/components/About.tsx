@@ -1,4 +1,6 @@
 
+import { Badge } from "@/components/ui/badge";
+
 const About = () => {
   return (
     <section className="py-32 bg-white" id="about">
@@ -34,16 +36,26 @@ const About = () => {
               <h3 className="text-2xl font-bold text-black mb-8">Education</h3>
               <div className="space-y-8">
                 <div>
-                  <h4 className="font-semibold text-black text-lg mb-2">
-                    Master of Computer Applications
-                  </h4>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h4 className="font-semibold text-black text-lg">
+                      Master of Computer Applications
+                    </h4>
+                    <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 border-yellow-200">
+                      Gold Medalist
+                    </Badge>
+                  </div>
                   <p className="text-gray-600 mb-1">University of Delhi</p>
                   <p className="text-sm text-gray-500">CGPA: 9.75 • Apr 2020 - Apr 2023</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-black text-lg mb-2">
-                    BSc(H) Computer Science
-                  </h4>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h4 className="font-semibold text-black text-lg">
+                      BSc(H) Computer Science
+                    </h4>
+                    <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 border-yellow-200">
+                      Gold Medalist
+                    </Badge>
+                  </div>
                   <p className="text-gray-600 mb-1">Hansraj College, University of Delhi</p>
                   <p className="text-sm text-gray-500">CGPA: 9.8 • May 2017 - Apr 2020</p>
                 </div>
