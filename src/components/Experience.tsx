@@ -52,29 +52,29 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-32 bg-gray-50" id="experience">
+    <section className="py-24 bg-gray-50/30" id="experience">
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-16">
-          <h2 className="text-5xl font-bold text-black mb-4 tracking-tight">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">
             Experience
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg text-gray-600">
             My journey in software development
           </p>
         </div>
         
-        <div className="space-y-8">
+        <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <Card key={index} className="border border-gray-200 bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <Card key={index} className="border border-gray-100/50 bg-white rounded-3xl overflow-hidden hover:shadow-sm transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-6">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-black mb-2">{exp.title}</h3>
-                    <p className="text-xl text-gray-900 font-medium mb-1">{exp.company}</p>
-                    <p className="text-gray-600">{exp.location}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{exp.title}</h3>
+                    <p className="text-lg text-gray-700 font-medium mb-1">{exp.company}</p>
+                    <p className="text-gray-500 text-sm">{exp.location}</p>
                   </div>
                   <div className="text-right">
-                    <span className="inline-block bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="inline-block bg-gray-50 text-gray-700 px-4 py-2 rounded-full text-sm font-medium border border-gray-100">
                       {exp.period}
                     </span>
                   </div>
@@ -84,7 +84,7 @@ const Experience = () => {
                   {exp.technologies.map((tech, techIndex) => (
                     <span 
                       key={tech} 
-                      className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
+                      className="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-sm font-medium border border-gray-100"
                     >
                       {tech}
                     </span>
@@ -93,8 +93,8 @@ const Experience = () => {
                 
                 <ul className="space-y-3">
                   {exp.achievements.map((achievement, idx) => (
-                    <li key={idx} className="text-gray-700 flex items-start">
-                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 mr-4 flex-shrink-0"></span>
+                    <li key={idx} className="text-gray-600 flex items-start text-sm leading-relaxed">
+                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></span>
                       <span>{achievement}</span>
                     </li>
                   ))}

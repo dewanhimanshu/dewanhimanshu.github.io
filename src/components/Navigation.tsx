@@ -30,10 +30,10 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-xl border-b border-gray-100 z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-b border-gray-100 z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="font-bold text-xl text-black">
+          <div className="font-semibold text-lg text-gray-900">
             Himanshu Dewan
           </div>
           
@@ -43,14 +43,14 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-600 hover:text-black transition-colors duration-200 text-sm font-medium"
+                className="text-gray-600 hover:text-gray-900 transition-colors duration-300 text-sm font-medium"
               >
                 {item.name}
               </button>
             ))}
             <Button 
               variant="outline" 
-              className="rounded-full border-gray-300 hover:border-black hover:bg-gray-50 transition-all duration-200 text-sm"
+              className="rounded-full border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 text-sm shadow-sm"
               onClick={handleResumeClick}
             >
               Resume
@@ -59,7 +59,7 @@ const Navigation = () => {
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+            className="md:hidden p-2 hover:bg-gray-50 rounded-lg transition-colors duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -72,13 +72,13 @@ const Navigation = () => {
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-100">
+          <div className="md:hidden border-t border-gray-50">
             <div className="py-4 space-y-2">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-black hover:bg-gray-50 transition-all duration-200 rounded-lg"
+                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-300 rounded-lg"
                 >
                   {item.name}
                 </button>
@@ -86,7 +86,7 @@ const Navigation = () => {
               <div className="px-4 pt-2">
                 <Button 
                   variant="outline" 
-                  className="w-full rounded-full border-gray-300 hover:border-black hover:bg-gray-50 transition-all duration-200"
+                  className="w-full rounded-full border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm"
                   onClick={handleResumeClick}
                 >
                   Resume
