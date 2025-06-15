@@ -1,18 +1,15 @@
 
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Languages/Frameworks",
-      skills: ["Java", "SpringBoot", "SQL", "MongoDB", "NoSQL", "OOPS", "Kafka", "Distributed Systems", "JUnit"],
-      gradient: "from-blue-500 to-indigo-500"
+      title: "Languages & Frameworks",
+      skills: ["Java", "SpringBoot", "SQL", "MongoDB", "NoSQL", "OOPS", "Kafka", "Distributed Systems", "JUnit"]
     },
     {
       title: "Developer Tools",
-      skills: ["Git", "Docker", "Kubernetes", "VS Code", "IntelliJ", "Linux", "Jenkins (CI/CD)", "Sonar", "Agile", "RESTful APIs", "System Design", "Microservices"],
-      gradient: "from-indigo-500 to-purple-500"
+      skills: ["Git", "Docker", "Kubernetes", "VS Code", "IntelliJ", "Linux", "Jenkins (CI/CD)", "Sonar", "Agile", "RESTful APIs", "System Design", "Microservices"]
     }
   ];
 
@@ -23,39 +20,32 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50" id="skills">
+    <section className="py-32 bg-white" id="skills">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent mb-4">
-            Technical Skills
+        <div className="mb-16">
+          <h2 className="text-5xl font-bold text-black mb-4 tracking-tight">
+            Skills & Achievements
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600">Technologies and tools I work with</p>
+          <p className="text-xl text-gray-600">
+            Technologies and accomplishments that drive my work
+          </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card 
-              key={index} 
-              className="hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-gradient-to-br from-white to-blue-50/50 animate-fade-in"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              <CardHeader>
-                <CardTitle className={`text-xl bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
+            <Card key={index} className="border border-gray-200 bg-gray-50 rounded-2xl">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-black mb-6">
                   {category.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+                </h3>
                 <div className="flex flex-wrap gap-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge 
+                  {category.skills.map((skill) => (
+                    <span 
                       key={skill} 
-                      variant="outline" 
-                      className="text-sm py-2 px-4 border-2 hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-500 hover:text-white hover:border-transparent transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                      style={{ animationDelay: `${skillIndex * 50}ms` }}
+                      className="bg-white text-gray-800 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 hover:border-gray-300 transition-colors duration-200"
                     >
                       {skill}
-                    </Badge>
+                    </span>
                   ))}
                 </div>
               </CardContent>
@@ -64,20 +54,16 @@ const Skills = () => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent mb-8 text-center">
-            Achievements & Leadership
+          <h3 className="text-3xl font-bold text-black mb-8">
+            Key Achievements
           </h3>
           <div className="space-y-6">
             {achievements.map((achievement, index) => (
-              <Card 
-                key={index} 
-                className="border-l-4 border-l-blue-500 hover:border-l-indigo-500 bg-gradient-to-r from-white to-blue-50/30 hover:shadow-xl transition-all duration-500 transform hover:scale-[1.02] animate-fade-in"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <CardContent className="pt-6">
+              <Card key={index} className="border border-gray-200 bg-gray-50 rounded-2xl">
+                <CardContent className="p-6">
                   <div className="flex items-start">
-                    <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <p className="text-gray-700 hover:text-gray-900 transition-colors duration-300">{achievement}</p>
+                    <div className="w-2 h-2 bg-black rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-lg">{achievement}</p>
                   </div>
                 </CardContent>
               </Card>
