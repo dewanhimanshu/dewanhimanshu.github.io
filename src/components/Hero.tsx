@@ -20,10 +20,13 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="mb-8 animate-fade-in">
           <div className="relative group">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 p-1 animate-pulse">
+              <div className="w-full h-full bg-white rounded-full"></div>
+            </div>
             <img
               src="/lovable-uploads/19703a54-f1b4-47d2-aec0-4dbaaa38b1a9.png"
               alt="Himanshu Dewan"
-              className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl"
+              className="relative w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl ring-4 ring-blue-500/20 ring-offset-4 ring-offset-white"
             />
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
