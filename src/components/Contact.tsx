@@ -5,7 +5,7 @@ import { Mail, User, Link, Phone } from "lucide-react";
 
 const Contact = () => {
   const handleEmailClick = () => {
-    window.open("mailto:himanshudewan@gmail.com", "_blank");
+    window.open("mailto:himanshudewan.mca20.du@gmail.com", "_blank");
   };
 
   const handleLinkedInClick = () => {
@@ -43,7 +43,7 @@ const Contact = () => {
               <CardTitle className="text-lg">Email</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600 mb-4">himanshudewan@gmail.com</p>
+              <p className="text-gray-600 mb-4">himanshudewan.mca20.du@gmail.com</p>
               <Button 
                 variant="outline" 
                 className="w-full border-2 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105" 
