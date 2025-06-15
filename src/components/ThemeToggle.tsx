@@ -9,8 +9,6 @@ export function ThemeToggle() {
   const toggleTheme = () => {
     if (theme === 'light') {
       setTheme('dark');
-    } else if (theme === 'dark') {
-      setTheme('system');
     } else {
       setTheme('light');
     }
@@ -25,7 +23,6 @@ export function ThemeToggle() {
 
   const getTitle = () => {
     if (theme === 'light') return 'Switch to dark mode';
-    if (theme === 'dark') return 'Switch to system mode';
     return 'Switch to light mode';
   };
 
