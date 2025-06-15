@@ -19,6 +19,16 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const handleResumeClick = () => {
+    console.log("Navigation resume button clicked");
+    try {
+      window.open("https://drive.google.com/file/d/17A2EYSlQhjVO5KH-ZP3cK0NUs5m5kAqj/view?usp=sharing", "_blank");
+      console.log("Navigation resume opened successfully");
+    } catch (error) {
+      console.error("Error opening resume from navigation:", error);
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-xl border-b border-gray-100 z-50">
       <div className="max-w-6xl mx-auto px-4">
@@ -41,6 +51,7 @@ const Navigation = () => {
             <Button 
               variant="outline" 
               className="rounded-full border-gray-300 hover:border-black hover:bg-gray-50 transition-all duration-200 text-sm"
+              onClick={handleResumeClick}
             >
               Resume
             </Button>
@@ -76,6 +87,7 @@ const Navigation = () => {
                 <Button 
                   variant="outline" 
                   className="w-full rounded-full border-gray-300 hover:border-black hover:bg-gray-50 transition-all duration-200"
+                  onClick={handleResumeClick}
                 >
                   Resume
                 </Button>
